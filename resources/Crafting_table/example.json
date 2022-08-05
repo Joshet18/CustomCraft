@@ -1,0 +1,28 @@
+{
+  "pattern": [
+    "AAA",
+    "AB ",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": 4,
+      "data": 0
+    },
+    "B": {
+      "item": 280,
+      "data": 0
+    }
+  },
+  "result": {
+    "item": 274,
+    "data": 0,
+    "count": 1,
+    "enchantments": {
+      "unbreaking": 10,
+      "efficiency": 10
+    },
+    "name": "Super Stone Pickaxe",
+    "lore": ["&r&5Line 1", "&r&5Line 2"]
+  }
+}
