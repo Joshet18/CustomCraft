@@ -52,3 +52,27 @@
   }
 }
 ```
+- Enchantments available
+```string
+protection
+fire_protection
+feather_falling
+blast_protection
+projectile_protection
+thorns
+respiration
+sharpness
+knockback
+fire_aspect
+efficiency
+silk_touch
+unbreaking
+power
+punch
+flame
+infinity
+mending
+vanishing
+fortune(must be registered with another plugin to use)
+looting(must be registered with another plugin to use)
+```
