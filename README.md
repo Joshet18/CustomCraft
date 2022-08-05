@@ -53,7 +53,7 @@
 }
 ```
 - Enchantments available
-```string
+```text
 protection
 fire_protection
 feather_falling
@@ -73,6 +73,6 @@ flame
 infinity
 mending
 vanishing
-fortune(must be registered with another plugin to use)
-looting(must be registered with another plugin to use)
+fortune (must be registered with another plugin to use)
+looting (must be registered with another plugin to use)
 ```
