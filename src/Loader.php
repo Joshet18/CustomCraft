@@ -103,11 +103,11 @@ class Loader extends PluginBase{
             $this->total++;
             $this->getServer()->getCraftingManager()->registerShapedRecipe(new ShapedRecipe($v['pattern'], $recipes, [$result]));
           }else{
-            $this->getLogger()->error("§cInvalid  data entered in {$path}");
+            $this->getLogger()->error("§cInvalid data entered in Crafting_table/{$path}");
           }
         }
       }else{
-        $this->getLogger()->error("§c{$path} must be a JSON file (Recipe not loaded for security)");
+        $this->getLogger()->error("§cCrafting_table/{$path} must be a JSON file (Recipe not loaded for security)");
       }
     }
   }
@@ -123,10 +123,10 @@ class Loader extends PluginBase{
           if(isset($v['tags']) && isset($v['output']) && isset($v['input']) && $this->checkFurnaceData($v['input']) && $this->checkFurnaceData($v['output'])){
             switch($this->checkTags($v['tags'])){
               case -1:
-                $this->getLogger()->error("§c{$path} tags must be of type array!");
+                $this->getLogger()->error("§cFurnace/{$path} tags must be of type array!");
               break;
               case 0:
-                $this->getLogger()->error("§cInvalid tags entered in {$path}, Tags available: [furnace, blast_furnace, smoker_furnace]");
+                $this->getLogger()->error("§cInvalid tags entered in Furnace/{$path}, Tags available: [furnace, blast_furnace, smoker_furnace]");
               break;
               case 1:
                 $this->total++;
@@ -137,13 +137,13 @@ class Loader extends PluginBase{
               break;
             }
           }elseif(!isset($v['output']) or !$this->checkFurnaceData($v['output'])){
-            $this->getLogger()->error("§cInvalid output format entered in {$path}");
+            $this->getLogger()->error("§cInvalid output format entered in Furnace/{$path}");
           }elseif(!isset($v['input']) or !$this->checkFurnaceData($v['input'])){
-            $this->getLogger()->error("§cInvalid input format entered in {$path}");
+            $this->getLogger()->error("§cInvalid input format entered in Furnace/{$path}");
           }
         }
       }else{
-        $this->getLogger()->error("§c{$path} must be a JSON file (Recipe not loaded for security)");
+        $this->getLogger()->error("§cFurnace/{$path} must be a JSON file (Recipe not loaded for security)");
       }
     }
   }
