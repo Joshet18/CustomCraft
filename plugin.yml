@@ -1,0 +1,6 @@
+name: CustomCraft
+main: cc\Loader
+version: 1.0
+api: 4.0.0
+author: Joshet18
+src-namespace-prefix: cc
