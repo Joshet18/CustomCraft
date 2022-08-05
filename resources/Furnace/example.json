@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "furnace",
+    "blast_furnace",
+    "smoker_furnace"
+  ],
+  "output": {
+    "item": 0,
+    "data": 0
+  },
+  "input": {
+    "item": 0,
+    "data": 0
+  }
+}
