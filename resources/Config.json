@@ -1,0 +1,13 @@
+{
+  "version": 1.0,
+  "blacklist": {
+    "crafting": [
+      "example",
+      "example2"
+    ],
+    "furnace": [
+      "example",
+      "example2"
+    ]
+  }
+}
