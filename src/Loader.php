@@ -91,11 +91,6 @@ class Loader extends PluginBase{
             if(isset($v['result']['count']) && is_numeric($v['result']['count']))$count = $v['result']['count'];
             $result = $factory->get($v['result']['item'], $v['result']['data'], $count);
             if(isset($v['result']['name']) && $v['result']['name'] !== "")$result->setCustomName("§r".TextFormat::colorize($v['result']['name']));
-            $lore = [];
-            if(isset($v['result']['lore']))foreach($v['result']['lore'] as $string){
-              $lore[] = TextFormat::colorize($string);
-            }
-            $result->setLore($lore);
             foreach($v['result']['enchantments'] as $e => $lvl){
               $enchant = EnchantmentIdMap::getInstance()->fromId($this->getEnchantmentByName($e));
               if($enchant !== null)$result->addEnchantment(new EnchantmentInstance($enchant, $lvl));
