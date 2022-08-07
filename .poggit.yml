@@ -5,4 +5,5 @@ branches:
 projects:
   CustomCraft:
     path: ""
+    icon: icon.png
 ...
