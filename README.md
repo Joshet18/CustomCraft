@@ -29,8 +29,7 @@
       "unbreaking": 10,
       "efficiency": 10
     },
-    "name": "Super Stone Pickaxe",
-    "lore": ["&r&5Line 1", "&r&5Line 2"]
+    "name": "Super Stone Pickaxe"
   }
 }
 ```
