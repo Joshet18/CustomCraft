@@ -1,3 +1,6 @@
+[![](https://poggit.pmmp.io/shield.state/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
+<a href="https://poggit.pmmp.io/p/CustomCraft"><img src="https://poggit.pmmp.io/shield.state/CustomCraft"></a>
+
 # CustomCraft
 
 >Pocketmine plugin that allows you to add recipes for Crafting Table, Furnace, Blast Furnace, Smoker Furnace
