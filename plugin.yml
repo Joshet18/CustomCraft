@@ -1,6 +1,7 @@
 name: CustomCraft
-main: cc\Loader
+main: Joshet18\CustomCraft\Loader
+description: "allows you to add recipes for Crafting Table, Furnace, Blast Furnace, Smoker Furnace"
 version: 1.0
 api: 4.0.0
 author: Joshet18
-src-namespace-prefix: cc
+src-namespace-prefix: Joshet18\CustomCraft
