@@ -1,11 +1,13 @@
 [![](https://poggit.pmmp.io/shield.state/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
+<a href="https://poggit.pmmp.io/p/CustomCraft"><img src="https://poggit.pmmp.io/shield.state/CustomCraft"></a>
 
-# CustomCraft
+## 🔧 Setup:
+1) Create json file in plugin folder (Furnace or Crafting_table)
+2) Edit the format using the item's id/meta
+3) Use the command /customcraft reload or restart the server to load all recipes 
 
->Pocketmine plugin that allows you to add recipes for Crafting Table, Furnace, Blast Furnace, Smoker Furnace
-
-## Recipes Usage
-- Create a new crafting table recipe
+## 📜 Formats:
+- Crafting Table:
 ```JSON
 {
   "pattern": [
@@ -35,7 +37,7 @@
   }
 }
 ```
-- Create a new furnace recipe
+- Furnace:
 ```json
 {
   "tags": [
@@ -53,27 +55,38 @@
   }
 }
 ```
-- Enchantments available
-```text
-protection
-fire_protection
-feather_falling
-blast_protection
-projectile_protection
-thorns
-respiration
-sharpness
-knockback
-fire_aspect
-efficiency
-silk_touch
-unbreaking
-power
-punch
-flame
-infinity
-mending
-vanishing
-fortune (must be registered with another plugin to use)
-looting (must be registered with another plugin to use)
-```
+## 🗒️ Items ids:
+
+[Click](https://github.com/Joshet18/CustomCraft/blob/main/ItemsIds.md) to show
+
+## 📋 Permissions:
+| Permission         | Command                |
+|--------------------|------------------------|
+| customcraft.reload | `/customcarft reload`  |
+
+
+## 📖 Enchantments available:
+
+| Name                  | Other plugin register require|
+|-----------------------|------------------------------|
+| protection            | ❌                           |
+| fire_protection       | ❌                           |
+| blast_protection      | ❌                           |
+| projectile_protection | ❌                           |
+| feather_falling       | ❌                           |
+| thorns                | ❌                           |
+| respiration           | ❌                           |
+| sharpness             | ❌                           |
+| knockback             | ❌                           |
+| fire_aspect           | ❌                           |
+| efficiency            | ❌                           |
+| silk_touch            | ❌                           |
+| unbreaking            | ❌                           |
+| power                 | ❌                           |
+| punch                 | ❌                           |
+| flame                 | ❌                           |
+| infinity              | ❌                           |
+| mending               | ❌                           |
+| vanishing             | ❌                           |
+| fortune               | ✔️                           |
+| looting               | ✔️                           |
