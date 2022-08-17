@@ -1,6 +1,6 @@
 <?php
 
-namespace cc;
+namespace Joshet18\CustomCraft;
 
 use pocketmine\crafting\ShapedRecipe;
 use pocketmine\crafting\FurnaceRecipe;
