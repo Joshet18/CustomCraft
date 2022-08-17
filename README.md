@@ -59,7 +59,8 @@
 ## 📋 Permissions:
 | Permission         | Command                |
 |--------------------|------------------------|
-| customcraft.reload | `/customcarft reload`  |
+| customcraft        | `/customcraft`         |
+| customcraft.reload | `/customcraft reload`  |
 
 
 ## 📖 Enchantments available:
