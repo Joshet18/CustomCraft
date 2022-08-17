@@ -1,3 +1,4 @@
+[![](https://poggit.pmmp.io/shield.state/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
 ## 🔧 Setup:
 1) Create json file in plugin folder (Furnace or Crafting_table)
 2) Edit the format using the item's id/meta
@@ -54,7 +55,7 @@
 ```
 ## 🗒️ Items ids:
 
-[Click](https://github.com/Joshet18/CustomCraft/blob/main/ItemsIds.md) to show
+- [Click](https://github.com/Joshet18/CustomCraft/blob/main/ItemsIds.md) to show
 
 ## 📋 Permissions:
 | Permission         | Command                |
