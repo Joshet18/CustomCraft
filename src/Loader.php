@@ -2,21 +2,23 @@
 
 namespace Joshet18\CustomCraft;
 
-use pocketmine\crafting\ShapedRecipe;
+use pocketmine\item\enchantment\EnchantmentInstance;
+use pocketmine\data\bedrock\EnchantmentIdMap;
+use pocketmine\item\enchantment\Enchantment;
+use pocketmine\data\bedrock\EnchantmentIds;
+use pocketmine\console\ConsoleCommandSender;
 use pocketmine\crafting\FurnaceRecipe;
+use pocketmine\crafting\ShapedRecipe;
 use pocketmine\crafting\FurnaceType;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\item\ItemFactory;
 use pocketmine\utils\Config;
-use pocketmine\data\bedrock\EnchantmentIds;
-
-use pocketmine\item\enchantment\Enchantment;
-
-use pocketmine\item\enchantment\EnchantmentInstance;
-use pocketmine\data\bedrock\EnchantmentIdMap;
 use pocketmine\item\ItemIds;
 use pocketmine\item\Item;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\player\Player;
 
 class Loader extends PluginBase{
   
@@ -64,6 +66,33 @@ class Loader extends PluginBase{
   
   public function onEnable(): void {
     $this->getLogger()->info("{$this->total} Recipes loaders");
+  }
+  
+  public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
+    if($cmd->getName() === "customcraft"){
+      if(!isset($args[0])){
+        $sender->sendMessage("Usage: /customcraft help");
+        return false;
+      }
+      switch($args[0]){
+        case "reload":
+          if($sender->hasPermission("customcraft.reload") or $sender instanceof ConsoleCommandSender){
+            $this->total = 0;
+            $sender->sendMessage("§aReloading recipes");
+            $this->loadCraftingRecipes();
+            $this->loadFuenaceRecipes();
+            $sender->sendMessage("§e{$this->total} §aRecipes reloaders");
+          }else{
+            $sender->sendMessage("§cYou do not have permission to execute this command!");
+          }
+        break;
+        case "help":
+        case "?":
+          $sender->sendMessage("§a/customcraft §ereload");
+        break;
+      }
+    }
+    return true;
   }
   
   public static function getInstance(){
