@@ -1,4 +1,6 @@
 [![](https://poggit.pmmp.io/shield.state/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
+[![](https://poggit.pmmp.io/shield.api/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
+[![](https://poggit.pmmp.io/shield.dl.total/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
 ## 🔧 Setup:
 1) Create json file in plugin folder (Furnace or Crafting_table)
 2) Edit the format using the item's id/meta
