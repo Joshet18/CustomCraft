@@ -6,22 +6,19 @@
   ],
   "key": {
     "A": {
-      "item": 4,
-      "data": 0
+      "item": "minecraft:cobble"
     },
     "B": {
-      "item": 280,
-      "data": 0
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": 274,
-    "data": 0,
+    "item": "minecraft:stone_pickaxe",
     "count": 1,
     "enchantments": {
       "unbreaking": 10,
       "efficiency": 10
     },
-    "name": "Super Stone Pickaxe"
+    "name": "&6Super Stone Pickaxe"
   }
 }
