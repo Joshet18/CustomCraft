@@ -53,17 +53,12 @@
 ```
 ## 🗒️ Items List:
 [Click](https://github.com/Joshet18/CustomCraft/blob/main/ItemsIds.md) to show list
-##
-
 ## 📋 Permissions:
 | Permission         | Command                |
 |--------------------|------------------------|
 | customcraft        | `/customcraft`         |
 | customcraft.reload | `/customcraft reload`  |
-
-
 ## 📖 Enchantments available:
-
 | Name                  | Other plugin register require|
 |-----------------------|------------------------------|
 | protection            | ❌                           |
