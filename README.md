@@ -1,6 +1,4 @@
 [![](https://poggit.pmmp.io/shield.state/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
-
-[![](https://poggit.pmmp.io/shield.state/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
 [![](https://poggit.pmmp.io/shield.api/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
 [![](https://poggit.pmmp.io/shield.dl.total/CustomCraft)](https://poggit.pmmp.io/p/CustomCraft)
 
