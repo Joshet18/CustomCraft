@@ -18,17 +18,14 @@
   ],
   "key": {
     "A": {
-      "item": 4,
-      "data": 0
+      "item": "minecraft:cobble"
     },
     "B": {
-      "item": 280,
-      "data": 0
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": 274,
-    "data": 0,
+    "item": "minecraft:stone_pickaxe"
     "count": 1,
     "enchantments": {
       "unbreaking": 10,
@@ -47,12 +44,10 @@
     "smoker_furnace"
   ],
   "output": {
-    "item": 0,
-    "data": 0
+    "item": "minecraft:cobble"
   },
   "input": {
-    "item": 0,
-    "data": 0
+    "item": "minecraft:stick"
   }
 }
 ```
@@ -91,5 +86,6 @@
 | infinity              | ❌                           |
 | mending               | ❌                           |
 | vanishing             | ❌                           |
+| swift_sneak           | ❌                           |
 | fortune               | ✔️                           |
 | looting               | ✔️                           |

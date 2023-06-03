@@ -1,690 +1,1629 @@
-| Name              | id   |
-|-------------------|------|
-| LIT_BLAST_FURNACE | -214 |
-| COMPOSTER         | -213 |
-| WOOD              | -212 |
-| JIGSAW            | -211 |
-| LAVA_CAULDRON     | -210 |
-| CAMPFIRE          | -209 |
-| LANTERN           | -208 |
-| SWEET_BERRY_BUSH  | -207 |
-| BELL              | -206 |
-| LOOM              | -204 |
-| BARREL            | -203 |
-| SMITHING_TABLE    | -202 |
-| FLETCHING_TABLE   | -201 |
-| CARTOGRAPHY_TABLE | -200 |
-| LIT_SMOKER        | -199 |
-| SMOKER            | -198 |
-| STONECUTTER_BLOCK | -197 |
-| BLAST_FURNACE     | -196 |
-| GRINDSTONE        | -195 |
-| LECTERN           | -194 |
-| DARKOAK_WALL_SIGN     | -193 |
-| DARKOAK_STANDING_SIGN | -192 |
-| ACACIA_WALL_SIGN | -191 |
-| ACACIA_STANDING_SIGN | -190 |
-| JUNGLE_WALL_SIGN | -189 |
-| JUNGLE_STANDING_SIGN | -188 |
-| BIRCH_WALL_SIGN | -187 |
-| BIRCH_STANDING_SIGN | -186 |
-| SMOOTH_QUARTZ_STAIRS | -185 |
-| RED_NETHER_BRICK_STAIRS | -184 |
-| SMOOTH_STONE | -183 |
-| SPRUCE_WALL_SIGN | -182 |
-| SPRUCE_STANDING_SIGN | -181 |
-| NORMAL_STONE_STAIRS | -180 |
-| MOSSY_COBBLESTONE_STAIRS | -179 |
-| END_BRICK_STAIRS | -178 |
-| SMOOTH_SANDSTONE_STAIRS | -177 |
-| SMOOTH_RED_SANDSTONE_STAIRS | -176 |
-| MOSSY_STONE_BRICK_STAIRS | -175 |
-| POLISHED_ANDESITE_STAIRS | -174 |
-| POLISHED_DIORITE_STAIRS | -173 |
-| POLISHED_GRANITE_STAIRS | -172 |
-| ANDESITE_STAIRS | -171 |
-| DIORITE_STAIRS | -170 |
-| GRANITE_STAIRS | -169 |
-| DOUBLE_STONE_SLAB4 | -168 |
-| DOUBLE_STONE_SLAB3 | -167 |
-| STONE_SLAB4 | -166 |
-| SCAFFOLDING | -165 |
-| BAMBOO_SAPLING | -164 |
-| BAMBOO | -163 |
-| STONE_SLAB3 | -162 |
-| BARRIER | -161 |
-| BUBBLE_COLUMN | -160 |
-| TURTLE_EGG | -159 |
-| CONDUIT | -157 |
-| SEA_PICKLE | -156 |
-| CARVED_PUMPKIN | -155 |
-| SPRUCE_PRESSURE_PLATE | -154 |
-| JUNGLE_PRESSURE_PLATE | -153 |
-| DARK_OAK_PRESSURE_PLATE | -152 |
-| BIRCH_PRESSURE_PLATE | -151 |
-| ACACIA_PRESSURE_PLATE | -150 |
-| SPRUCE_TRAPDOOR | -149 |
-| JUNGLE_TRAPDOOR | -148 |
-| DARK_OAK_TRAPDOOR | -147 |
-| BIRCH_TRAPDOOR | -146 |
-| ACACIA_TRAPDOOR | -145 |
-| SPRUCE_BUTTON | -144 |
-| JUNGLE_BUTTON | -143 |
-| DARK_OAK_BUTTON | -142 |
-| BIRCH_BUTTON | -141 |
-| ACACIA_BUTTON | -140 |
-| DRIED_KELP_BLOCK | -139 |
-| KELP_BLOCK | -138 |
-| CORAL_FAN_HANG3 | -137 |
-| CORAL_FAN_HANG2 | -136 |
-| CORAL_FAN_HANG | -135 |
-| CORAL_FAN_DEAD | -134 |
-| CORAL_FAN | -133 |
-| CORAL_BLOCK | -132 |
-| CORAL | -131 |
-| SEAGRASS | -130 |
-| ELEMENT_118 | -129 |
-| ELEMENT_117 | -128 |
-| ELEMENT_116 | -127 |
-| ELEMENT_115 | -126 |
-| ELEMENT_114 | -125 |
-| ELEMENT_113 | -124 |
-| ELEMENT_112 | -123 |
-| ELEMENT_111 | -122 |
-| ELEMENT_110 | -121 |
-| ELEMENT_109 | -120 |
-| ELEMENT_108 | -119 |
-| ELEMENT_107 | -118 |
-| ELEMENT_106 | -117 |
-| ELEMENT_105 | -116 |
-| ELEMENT_104 | -115 |
-| ELEMENT_103 | -114 |
-| ELEMENT_102 | -113 |
-| ELEMENT_101 | -112 |
-| ELEMENT_100 | -111 |
-| ELEMENT_99 | -110 |
-| ELEMENT_98 | -109 |
-| ELEMENT_97 | -108 |
-| ELEMENT_96 | -107 |
-| ELEMENT_95 | -106 |
-| ELEMENT_94 | -105 |
-| ELEMENT_93 | -104 |
-| ELEMENT_92 | -103 |
-| ELEMENT_91 | -102 |
-| ELEMENT_90 | -101 |
-| ELEMENT_89 | -100 |
-| ELEMENT_88 | -99 |
-| ELEMENT_87 | -98 |
-| ELEMENT_86 | -97 |
-| ELEMENT_85 | -96 |
-| ELEMENT_84 | -95 |
-| ELEMENT_83 | -94 |
-| ELEMENT_82 | -93 |
-| ELEMENT_81 | -92 |
-| ELEMENT_80 | -91 |
-| ELEMENT_79 | -90 |
-| ELEMENT_78 | -89 |
-| ELEMENT_77 | -88 |
-| ELEMENT_76 | -87 |
-| ELEMENT_75 | -86 |
-| ELEMENT_74 | -85 |
-| ELEMENT_73 | -84 |
-| ELEMENT_72 | -83 |
-| ELEMENT_71 | -82 |
-| ELEMENT_70 | -81 |
-| ELEMENT_69 | -80 |
-| ELEMENT_68 | -79 |
-| ELEMENT_67 | -78 |
-| ELEMENT_66 | -77 |
-| ELEMENT_65 | -76 |
-| ELEMENT_64 | -75 |
-| ELEMENT_63 | -74 |
-| ELEMENT_62 | -73 |
-| ELEMENT_61 | -72 |
-| ELEMENT_60 | -71 |
-| ELEMENT_59 | -70 |
-| ELEMENT_58 | -69 |
-| ELEMENT_57 | -68 |
-| ELEMENT_56 | -67 |
-| ELEMENT_55 | -66 |
-| ELEMENT_54 | -65 |
-| ELEMENT_53 | -64 |
-| ELEMENT_52 | -63 |
-| ELEMENT_51 | -62 |
-| ELEMENT_50 | -61 |
-| ELEMENT_49 | -60 |
-| ELEMENT_48 | -59 |
-| ELEMENT_47 | -58 |
-| ELEMENT_46 | -57 |
-| ELEMENT_45 | -56 |
-| ELEMENT_44 | -55 |
-| ELEMENT_43 | -54 |
-| ELEMENT_42 | -53 |
-| ELEMENT_41 | -52 |
-| ELEMENT_40 | -51 |
-| ELEMENT_39 | -50 |
-| ELEMENT_38 | -49 |
-| ELEMENT_37 | -48 |
-| ELEMENT_36 | -47 |
-| ELEMENT_35 | -46 |
-| ELEMENT_34 | -45 |
-| ELEMENT_33 | -44 |
-| ELEMENT_32 | -43 |
-| ELEMENT_31 | -42 |
-| ELEMENT_30 | -41 |
-| ELEMENT_29 | -40 |
-| ELEMENT_28 | -39 |
-| ELEMENT_27 | -38 |
-| ELEMENT_26 | -37 |
-| ELEMENT_25 | -36 |
-| ELEMENT_24 | -35 |
-| ELEMENT_23 | -34 |
-| ELEMENT_22 | -33 |
-| ELEMENT_21 | -32 |
-| ELEMENT_20 | -31 |
-| ELEMENT_19 | -30 |
-| ELEMENT_18 | -29 |
-| ELEMENT_17 | -28 |
-| ELEMENT_16 | -27 |
-| ELEMENT_15 | -26 |
-| ELEMENT_14 | -25 |
-| ELEMENT_13 | -24 |
-| ELEMENT_12 | -23 |
-| ELEMENT_11 | -22 |
-| ELEMENT_10 | -21 |
-| ELEMENT_9 | -20 |
-| ELEMENT_8 | -19 |
-| ELEMENT_7 | -18 |
-| ELEMENT_6 | -17 |
-| ELEMENT_5 | -16 |
-| ELEMENT_4 | -15 |
-| ELEMENT_3 | -14 |
-| ELEMENT_2 | -13 |
-| ELEMENT_1 | -12 |
-| BLUE_ICE | -11 |
-| STRIPPED_OAK_LOG | -10 |
-| STRIPPED_DARK_OAK_LOG | -9 |
-| STRIPPED_ACACIA_LOG | -8 |
-| STRIPPED_JUNGLE_LOG | -7 |
-| STRIPPED_BIRCH_LOG | -6 |
-| STRIPPED_SPRUCE_LOG | -5 |
-| PRISMARINE_BRICKS_STAIRS | -4 |
-| DARK_PRISMARINE_STAIRS | -3 |
-| PRISMARINE_STAIRS | -2 |
-| AIR | 0 |
-| STONE | 1 |
-| GRASS | 2 |
-| DIRT | 3 |
-| COBBLESTONE | 4 |
-| WOODEN_PLANKS | 5 |
-| SAPLING | 6 |
-| BEDROCK | 7 |
-| FLOWING_WATER | 8 |
-| WATER | 9 |
-| FLOWING_LAVA | 10 |
-| LAVA | 11 |
-| SAND | 12 |
-| GRAVEL | 13 |
-| GOLD_ORE | 14 |
-| IRON_ORE | 15 |
-| COAL_ORE | 16 |
-| LOG | 17 |
-| LEAVES | 18 |
-| SPONGE | 19 |
-| GLASS | 20 |
-| LAPIS_ORE | 21 |
-| LAPIS_BLOCK | 22 |
-| DISPENSER | 23 |
-| SANDSTONE | 24 |
-| NOTE_BLOCK | 25 |
-| BED_BLOCK | 26 |
-| POWERED_RAIL | 27 |
-| DETECTOR_RAIL | 28 |
-| STICKY_PISTON | 29 |
-| COBWEB | 30 |
-| TALL_GRASS | 31 |
-| DEAD_BUSH | 32 |
-| PISTON | 33 |
-| PISTONARMCOLLISION | 34 |
-| WOOL | 35 |
-| ELEMENT_0 | 36 |
-| DANDELION | 37 |
-| POPPY | 38 |
-| BROWN_MUSHROOM | 39 |
-| RED_MUSHROOM | 40 |
-| GOLD_BLOCK | 41 |
-| IRON_BLOCK | 42 |
-| DOUBLE_STONE_SLAB | 43 |
-| STONE_SLAB | 44 |
-| BRICK_BLOCK | 45 |
-| TNT | 46 |
-| BOOKSHELF | 47 |
-| MOSSY_COBBLESTONE | 48 |
-| OBSIDIAN | 49 |
-| TORCH | 50 |
-| FIRE | 51 |
-| MOB_SPAWNER | 52 |
-| OAK_STAIRS | 53 |
-| CHEST | 54 |
-| REDSTONE_WIRE | 55 |
-| DIAMOND_ORE | 56 |
-| DIAMOND_BLOCK | 57 |
-| CRAFTING_TABLE | 58 |
-| WHEAT_BLOCK | 59 |
-| FARMLAND | 60 |
-| FURNACE | 61 |
-| LIT_FURNACE | 62 |
-| SIGN_POST | 63 |
-| OAK_DOOR_BLOCK | 64 |
-| LADDER | 65 |
-| RAIL | 66 |
-| COBBLESTONE_STAIRS | 67 |
-| WALL_SIGN | 68 |
-| LEVER | 69 |
-| STONE_PRESSURE_PLATE | 70 |
-| IRON_DOOR_BLOCK | 71 |
-| WOODEN_PRESSURE_PLATE | 72 |
-| REDSTONE_ORE | 73 |
-| LIT_REDSTONE_ORE | 74 |
-| UNLIT_REDSTONE_TORCH | 75 |
-| REDSTONE_TORCH | 76 |
-| STONE_BUTTON | 77 |
-| SNOW_LAYER | 78 |
-| ICE | 79 |
-| SNOW_BLOCK | 80 |
-| CACTUS | 81 |
-| CLAY_BLOCK | 82 |
-| SUGARCANE_BLOCK | 83 |
-| JUKEBOX | 84 |
-| FENCE | 85 |
-| PUMPKIN | 86 |
-| NETHERRACK | 87 |
-| SOUL_SAND | 88 |
-| GLOWSTONE | 89 |
-| PORTAL | 90 |
-| JACK_O_LANTERN | 91 |
-| CAKE_BLOCK | 92 |
-| REPEATER_BLOCK | 93 |
-| POWERED_REPEATER | 94 |
-| INVISIBLE_BEDROCK | 95 |
-| TRAPDOOR | 96 |
-| MONSTER_EGG | 97 |
-| STONE_BRICK | 98 |
-| BROWN_MUSHROOM_BLOCK | 99 |
-| RED_MUSHROOM_BLOCK | 100 |
-| IRON_BARS | 101 |
-| GLASS_PANE | 102 |
-| MELON_BLOCK | 103 |
-| PUMPKIN_STEM | 104 |
-| MELON_STEM | 105 |
-| VINE | 106, VINES | 106 |
-| FENCE_GATE | 107 |
-| BRICK_STAIRS | 108 |
-| STONE_BRICK_STAIRS | 109 |
-| MYCELIUM | 110 |
-| LILY_PAD | 111 |
-| NETHER_BRICK_BLOCK | 112 |
-| NETHER_BRICK_FENCE | 113 |
-| NETHER_BRICK_STAIRS | 114 |
-| NETHER_WART_PLANT | 115 |
-| ENCHANTING_TABLE | 116 |
-| BREWING_STAND_BLOCK | 117 |
-| CAULDRON_BLOCK | 118 |
-| END_PORTAL | 119 |
-| END_PORTAL_FRAME | 120 |
-| END_STONE | 121 |
-| DRAGON_EGG | 122 |
-| REDSTONE_LAMP | 123 |
-| LIT_REDSTONE_LAMP | 124 |
-| DROPPER | 125 |
-| ACTIVATOR_RAIL | 126 |
-| COCOA | 127, COCOA_BLOCK | 127 |
-| SANDSTONE_STAIRS | 128 |
-| EMERALD_ORE | 129 |
-| ENDER_CHEST | 130 |
-| TRIPWIRE_HOOK | 131 |
-| TRIPWIRE | 132, TRIP_WIRE | 132 |
-| EMERALD_BLOCK | 133 |
-| SPRUCE_STAIRS | 134 |
-| BIRCH_STAIRS | 135 |
-| JUNGLE_STAIRS | 136 |
-| COMMAND_BLOCK | 137 |
-| BEACON | 138 |
-| COBBLESTONE_WALL | 139 |
-| FLOWER_POT_BLOCK | 140 |
-| CARROT_BLOCK | 141 |
-| POTATO_BLOCK | 142 |
-| WOODEN_BUTTON | 143 |
-| MOB_HEAD_BLOCK | 144 |
-| ANVIL | 145 |
-| TRAPPED_CHEST | 146 |
-| LIGHT_WEIGHTED_PRESSURE_PLATE | 147 |
-| HEAVY_WEIGHTED_PRESSURE_PLATE | 148 |
-| COMPARATOR_BLOCK | 149 |
-| POWERED_COMPARATOR | 150 |
-| DAYLIGHT_SENSOR | 151 |
-| REDSTONE_BLOCK | 152 |
-| QUARTZ_ORE | 153 |
-| HOPPER_BLOCK | 154 |
-| QUARTZ_BLOCK | 155 |
-| QUARTZ_STAIRS | 156 |
-| DOUBLE_WOODEN_SLAB | 157 |
-| WOODEN_SLAB | 158 |
-| TERRACOTTA | 159 |
-| STAINED_GLASS_PANE | 160 |
-| LEAVES2 | 161 |
-| LOG2 | 162 |
-| ACACIA_STAIRS | 163 |
-| DARK_OAK_STAIRS | 164 |
-| SLIME_BLOCK | 165 |
-| GLOW_STICK | 166 |
-| IRON_TRAPDOOR | 167 |
-| PRISMARINE | 168 |
-| SEA_LANTERN | 169 |
-| HAY_BALE | 170 |
-| CARPET | 171 |
-| HARDENED_CLAY | 172 |
-| COAL_BLOCK | 173 |
-| PACKED_ICE | 174 |
-| DOUBLE_PLANT | 175 |
-| STANDING_BANNER | 176 |
-| WALL_BANNER | 177 |
-| DAYLIGHT_SENSOR_INVERTED | 178 |
-| RED_SANDSTONE | 179 |
-| RED_SANDSTONE_STAIRS | 180 |
-| DOUBLE_STONE_SLAB2 | 181 |
-| STONE_SLAB2 | 182 |
-| SPRUCE_FENCE_GATE | 183 |
-| BIRCH_FENCE_GATE | 184 |
-| JUNGLE_FENCE_GATE | 185 |
-| DARK_OAK_FENCE_GATE | 186 |
-| ACACIA_FENCE_GATE | 187 |
-| REPEATING_COMMAND_BLOCK | 188 |
-| CHAIN_COMMAND_BLOCK | 189 |
-| HARD_GLASS_PANE | 190 |
-| HARD_STAINED_GLASS_PANE | 191 |
-| CHEMICAL_HEAT | 192 |
-| SPRUCE_DOOR_BLOCK | 193 |
-| BIRCH_DOOR_BLOCK | 194 |
-| JUNGLE_DOOR_BLOCK | 195 |
-| ACACIA_DOOR_BLOCK | 196 |
-| DARK_OAK_DOOR_BLOCK | 197 |
-| GRASS_PATH | 198 |
-| ITEM_FRAME_BLOCK | 199 |
-| CHORUS_FLOWER | 200 |
-| PURPUR_BLOCK | 201 |
-| COLORED_TORCH_RG | 202 |
-| PURPUR_STAIRS | 203 |
-| COLORED_TORCH_BP | 204 |
-| UNDYED_SHULKER_BOX | 205 |
-| END_BRICKS | 206 |
-| FROSTED_ICE | 207 |
-| END_ROD | 208 |
-| END_GATEWAY | 209 |
-| MAGMA | 213 |
-| NETHER_WART_BLOCK | 214 |
-| RED_NETHER_BRICK | 215 |
-| BONE_BLOCK | 216 |
-| SHULKER_BOX | 218 |
-| PURPLE_GLAZED_TERRACOTTA | 219 |
-| WHITE_GLAZED_TERRACOTTA | 220 |
-| ORANGE_GLAZED_TERRACOTTA | 221 |
-| MAGENTA_GLAZED_TERRACOTTA | 222 |
-| LIGHT_BLUE_GLAZED_TERRACOTTA | 223 |
-| YELLOW_GLAZED_TERRACOTTA | 224 |
-| LIME_GLAZED_TERRACOTTA | 225 |
-| PINK_GLAZED_TERRACOTTA | 226 |
-| GRAY_GLAZED_TERRACOTTA | 227 |
-| SILVER_GLAZED_TERRACOTTA | 228 |
-| CYAN_GLAZED_TERRACOTTA | 229 |
-| BLUE_GLAZED_TERRACOTTA | 231 |
-| BROWN_GLAZED_TERRACOTTA | 232 |
-| GREEN_GLAZED_TERRACOTTA | 233 |
-| RED_GLAZED_TERRACOTTA | 234 |
-| BLACK_GLAZED_TERRACOTTA | 235 |
-| CONCRETE | 236 |
-| CONCRETE_POWDER | 237 |
-| CHEMISTRY_TABLE | 238 |
-| UNDERWATER_TORCH | 239 |
-| CHORUS_PLANT | 240 |
-| STAINED_GLASS | 241 |
-| PODZOL | 243 |
-| BEETROOT_BLOCK | 244 |
-| STONECUTTER | 245 |
-| GLOWING_OBSIDIAN | 246 |
-| NETHER_REACTOR | 247 |
-| INFO_UPDATE | 248 |
-| INFO_UPDATE2 | 249 |
-| MOVING_BLOCK | 250 |
-| OBSERVER | 251 |
-| STRUCTURE_BLOCK | 252 |
-| HARD_GLASS | 253 |
-| HARD_STAINED_GLASS | 254 |
-| RESERVED6 | 255 |
-| IRON_SHOVEL | 256 |
-| IRON_PICKAXE | 257 |
-| IRON_AXE | 258 |
-| FLINT_AND_STEEL | 259 |
-| APPLE | 260 |
-| BOW | 261 |
-| ARROW | 262 |
-| COAL | 263 |
-| DIAMOND | 264 |
-| IRON_INGOT | 265 |
-| GOLD_INGOT | 266 |
-| IRON_SWORD | 267 |
-| WOODEN_SWORD | 268 |
-| WOODEN_SHOVEL | 269 |
-| WOODEN_PICKAXE | 270 |
-| WOODEN_AXE | 271 |
-| STONE_SWORD | 272 |
-| STONE_SHOVEL | 273 |
-| STONE_PICKAXE | 274 |
-| STONE_AXE | 275 |
-| DIAMOND_SWORD | 276 |
-| DIAMOND_SHOVEL | 277 |
-| DIAMOND_PICKAXE | 278 |
-| DIAMOND_AXE | 279 |
-| STICK | 280 |
-| BOWL | 281 |
-| MUSHROOM_STEW | 282 |
-| GOLDEN_SWORD | 283 |
-| GOLDEN_SHOVEL | 284 |
-| GOLDEN_PICKAXE | 285 |
-| GOLDEN_AXE | 286 |
-| STRING | 287 |
-| FEATHER | 288 |
-| GUNPOWDER | 289 |
-| WOODEN_HOE | 290 |
-| STONE_HOE | 291 |
-| IRON_HOE | 292 |
-| DIAMOND_HOE | 293 |
-| GOLDEN_HOE | 294 |
-| SEEDS | 295 |
-| WHEAT | 296 |
-| BREAD | 297 |
-| LEATHER_HELMET | 298 |
-| LEATHER_CHESTPLATE | 299 |
-| LEATHER_LEGGINGS | 300 |
-| LEATHER_BOOTS | 301 |
-| CHAINMAIL_HELMET | 302 |
-| CHAINMAIL_CHESTPLATE | 303 |
-| CHAINMAIL_LEGGINGS | 304 |
-| CHAINMAIL_BOOTS | 305 |
-| IRON_HELMET | 306 |
-| IRON_CHESTPLATE | 307 |
-| IRON_LEGGINGS | 308 |
-| IRON_BOOTS | 309 |
-| DIAMOND_HELMET | 310 |
-| DIAMOND_CHESTPLATE | 311 |
-| DIAMOND_LEGGINGS | 312 |
-| DIAMOND_BOOTS | 313 |
-| GOLDEN_HELMET | 314 |
-| GOLDEN_CHESTPLATE | 315 |
-| GOLDEN_LEGGINGS | 316 |
-| GOLDEN_BOOTS | 317 |
-| FLINT | 318 |
-| PORKCHOP | 319 |
-| COOKED_PORKCHOP | 320 |
-| PAINTING | 321 |
-| GOLDEN_APPLE | 322 |
-| SIGN | 323 |
-| OAK_DOOR | 324 |
-| BUCKET | 325 |
-| MINECART | 328 |
-| SADDLE | 329 |
-| IRON_DOOR | 330 |
-| REDSTONE | 331 |
-| SNOWBALL | 332 |
-| BOAT | 333 |
-| LEATHER | 334 |
-| KELP | 335 |
-| BRICK | 336 |
-| CLAY | 337 |
-| SUGARCANE | 338 |
-| PAPER | 339 |
-| BOOK | 340 |
-| SLIME_BALL | 341 |
-| CHEST_MINECART | 342 |
-| EGG | 344 |
-| COMPASS | 345 |
-| FISHING_ROD | 346 |
-| CLOCK | 347 |
-| GLOWSTONE_DUST | 348 |
-| FISH | 349, RAW_FISH | 349 |
-| COOKED_FISH | 350 |
-| DYE | 351 |
-| BONE | 352 |
-| SUGAR | 353 |
-| CAKE | 354 |
-| BED | 355 |
-| REPEATER | 356 |
-| COOKIE | 357 |
-| FILLED_MAP | 358 |
-| SHEARS | 359 |
-| MELON_SLICE | 360 |
-| PUMPKIN_SEEDS | 361 |
-| MELON_SEEDS | 362 |
-| BEEF | 363 |
-| COOKED_BEEF | 364 |
-| CHICKEN | 365 |
-| COOKED_CHICKEN | 366 |
-| ROTTEN_FLESH | 367 |
-| ENDER_PEARL | 368 |
-| BLAZE_ROD | 369 |
-| GHAST_TEAR | 370 |
-| GOLDEN_NUGGET | 371 |
-| NETHER_WART | 372 |
-| POTION | 373 |
-| GLASS_BOTTLE | 374 |
-| SPIDER_EYE | 375 |
-| FERMENTED_SPIDER_EYE | 376 |
-| BLAZE_POWDER | 377 |
-| MAGMA_CREAM | 378 |
-| BREWING_STAND | 379 |
-| CAULDRON | 380 |
-| ENDER_EYE | 381 |
-| GLISTERING_MELON | 382 |
-| SPAWN_EGG | 383 |
-| EXPERIENCE_BOTTLE | 384 |
-| FIREBALL | 385 |
-| WRITABLE_BOOK | 386 |
-| WRITTEN_BOOK | 387 |
-| EMERALD | 388 |
-| ITEM_FRAME | 389 |
-| FLOWER_POT | 390 |
-| CARROT | 391 |
-| POTATO | 392 |
-| BAKED_POTATO | 393 |
-| POISONOUS_POTATO | 394 |
-| EMPTY_MAP | 395 |
-| GOLDEN_CARROT | 396 |
-| MOB_HEAD | 397 |
-| CARROT_ON_A_STICK | 398 |
-| NETHER_STAR | 399 |
-| PUMPKIN_PIE | 400 |
-| FIREWORKS | 401 |
-| FIREWORKS_CHARGE | 402 |
-| ENCHANTED_BOOK | 403 |
-| COMPARATOR | 404 |
-| NETHER_BRICK | 405 |
-| QUARTZ | 406 |
-| TNT_MINECART | 407 |
-| HOPPER_MINECART | 408 |
-| PRISMARINE_SHARD | 409 |
-| HOPPER | 410 |
-| RABBIT | 411 |
-| COOKED_RABBIT | 412 |
-| RABBIT_STEW | 413 |
-| RABBIT_FOOT | 414 |
-| RABBIT_HIDE | 415 |
-| HORSE_ARMOR_LEATHER | 416 |
-| HORSE_ARMOR_IRON | 417 |
-| GOLDEN_HORSE_ARMOR | 418 |
-| DIAMOND_HORSE_ARMOR | 419 |
-| LEAD | 420 |
-| NAME_TAG | 421 |
-| PRISMARINE_CRYSTALS | 422 |
-| MUTTON | 423 |
-| COOKED_MUTTON | 424 |
-| ARMOR_STAND | 425 |
-| END_CRYSTAL | 426 |
-| SPRUCE_DOOR | 427 |
-| BIRCH_DOOR | 428 |
-| JUNGLE_DOOR | 429 |
-| ACACIA_DOOR | 430 |
-| DARK_OAK_DOOR | 431 |
-| CHORUS_FRUIT | 432 |
-| CHORUS_FRUIT_POPPED | 433 |
-| BANNER_PATTERN | 434 |
-| DRAGON_BREATH | 437 |
-| SPLASH_POTION | 438 |
-| LINGERING_POTION | 441 |
-| SPARKLER | 442 |
-| COMMAND_BLOCK_MINECART | 443 |
-| ELYTRA | 444 |
-| SHULKER_SHELL | 445 |
-| BANNER | 446 |
-| MEDICINE | 447 |
-| BALLOON | 448 |
-| RAPID_FERTILIZER | 449 |
-| TOTEM | 450 |
-| BLEACH | 451 |
-| IRON_NUGGET | 452 |
-| ICE_BOMB | 453 |
-| TRIDENT | 455 |
-| BEETROOT | 457 |
-| BEETROOT_SEEDS | 458 |
-| BEETROOT_SOUP | 459 |
-| SALMON | 460 |
-| CLOWNFISH | 461 |
-| PUFFERFISH | 462 |
-| COOKED_SALMON | 463 |
-| DRIED_KELP | 464 |
-| NAUTILUS_SHELL | 465 |
-| ENCHANTED_GOLDEN_APPLE | 466 |
-| HEART_OF_THE_SEA | 467 |
-| TURTLE_SHELL_PIECE | 468 |
-| TURTLE_HELMET | 469 |
-| PHANTOM_MEMBRANE | 470 |
-| CROSSBOW | 471 |
-| SPRUCE_SIGN | 472 |
-| BIRCH_SIGN | 473 |
-| JUNGLE_SIGN | 474 |
-| ACACIA_SIGN | 475 |
-| DARKOAK_SIGN | 476 |
-| SWEET_BERRIES | 477 |
-| COMPOUND | 499 |
-| RECORD_13 | 500 |
-| RECORD_CAT | 501 |
-| RECORD_BLOCKS | 502 |
-| RECORD_CHIRP | 503 |
-| RECORD_FAR | 504 |
-| RECORD_MALL | 505 |
-| RECORD_MELLOHI | 506 |
-| RECORD_STAL | 507 |
-| RECORD_STRAD | 508 |
-| RECORD_WARD | 509 |
-| RECORD_11 | 510 |
-| RECORD_WAIT | 511 |
-| SHIELD | 513 |
+| tems ist               |
+|--------------------------|
+| acacia_button |
+| acacia_door |
+| acacia_door_block |
+| acacia_fence |
+| acacia_fence_gate |
+| acacia_leaves |
+| acacia_log |
+| acacia_planks |
+| acacia_pressure_plate |
+| acacia_sapling |
+| acacia_sign |
+| acacia_slab |
+| acacia_stairs |
+| acacia_standing_sign |
+| acacia_trapdoor |
+| acacia_wall_sign |
+| acacia_wood |
+| acacia_wood_stairs |
+| acacia_wooden_stairs |
+| activator_rail |
+| active_redstone_lamp |
+| air |
+| all_sided_mushroom_stem |
+| allium |
+| amethyst_block |
+| ancient_debris |
+| andesite |
+| andesite_slab |
+| andesite_stairs |
+| andesite_wall |
+| anvil |
+| ateupd_block |
+| azalea_leaves |
+| azure_bluet |
+| bamboo |
+| bamboo_sapling |
+| banner |
+| barrel |
+| barrier |
+| basalt |
+| beacon |
+| bed |
+| bed_block |
+| bedrock |
+| beetroot_block |
+| beetroots |
+| bell |
+| birch_button |
+| birch_door |
+| birch_door_block |
+| birch_fence |
+| birch_fence_gate |
+| birch_leaves |
+| birch_log |
+| birch_planks |
+| birch_pressure_plate |
+| birch_sapling |
+| birch_sign |
+| birch_slab |
+| birch_stairs |
+| birch_standing_sign |
+| birch_trapdoor |
+| birch_wall_sign |
+| birch_wood |
+| birch_wood_stairs |
+| birch_wooden_stairs |
+| blackstone |
+| blackstone_slab |
+| blackstone_stairs |
+| blackstone_wall |
+| blast_furnace |
+| blue_ice |
+| blue_orchid |
+| blue_torch |
+| bone_block |
+| bookshelf |
+| brewing_stand |
+| brewing_stand_block |
+| brick_block |
+| brick_slab |
+| brick_stairs |
+| brick_wall |
+| bricks |
+| bricks_block |
+| brown_mushroom |
+| brown_mushroom_block |
+| burning_furnace |
+| bush |
+| cactus |
+| cake |
+| cake_block |
+| calcite |
+| candle |
+| carpet |
+| carrot_block |
+| carrots |
+| carved_pumpkin |
+| cauldron |
+| cave_vines |
+| chain |
+| chemical_heat |
+| chemistry_table |
+| chest |
+| chipped_anvil |
+| chiseled_deepslate |
+| chiseled_nether_bricks |
+| chiseled_polished_blackstone |
+| chiseled_quartz |
+| chiseled_red_sandstone |
+| chiseled_sandstone |
+| chiseled_stone_bricks |
+| chorus_flower |
+| chorus_plant |
+| clay_block |
+| coal_block |
+| coal_ore |
+| coarse_dirt |
+| cobble |
+| cobble_stairs |
+| cobble_wall |
+| cobbled_deepslate |
+| cobbled_deepslate_slab |
+| cobbled_deepslate_stairs |
+| cobbled_deepslate_wall |
+| cobblestone |
+| cobblestone_slab |
+| cobblestone_stairs |
+| cobblestone_wall |
+| cobweb |
+| cocoa |
+| cocoa_block |
+| cocoa_pod |
+| cocoa_pods |
+| colored_torch_bp |
+| colored_torch_rg |
+| comparator |
+| comparator_block |
+| compound_creator |
+| concrete |
+| concrete_powder |
+| concretepowder |
+| copper_ore |
+| coral |
+| coral_block |
+| coral_fan |
+| coral_fan_dead |
+| coral_fan_hang |
+| coral_fan_hang2 |
+| coral_fan_hang3 |
+| cornflower |
+| cracked_deepslate_bricks |
+| cracked_deepslate_tiles |
+| cracked_nether_bricks |
+| cracked_polished_blackstone_bricks |
+| cracked_stone_bricks |
+| crafting_table |
+| creeper_head |
+| crimson_button |
+| crimson_door |
+| crimson_fence |
+| crimson_fence_gate |
+| crimson_hyphae |
+| crimson_planks |
+| crimson_pressure_plate |
+| crimson_sign |
+| crimson_slab |
+| crimson_stairs |
+| crimson_stem |
+| crimson_trapdoor |
+| crying_obsidian |
+| cut_red_sandstone |
+| cut_red_sandstone_slab |
+| cut_sandstone |
+| cut_sandstone_slab |
+| damaged_anvil |
+| dandelion |
+| dark_oak_button |
+| dark_oak_door |
+| dark_oak_door_block |
+| dark_oak_fence |
+| dark_oak_fence_gate |
+| dark_oak_leaves |
+| dark_oak_log |
+| dark_oak_planks |
+| dark_oak_pressure_plate |
+| dark_oak_sapling |
+| dark_oak_sign |
+| dark_oak_slab |
+| dark_oak_stairs |
+| dark_oak_standing_sign |
+| dark_oak_trapdoor |
+| dark_oak_wall_sign |
+| dark_oak_wood |
+| dark_oak_wood_stairs |
+| dark_oak_wooden_stairs |
+| dark_prismarine |
+| dark_prismarine_slab |
+| dark_prismarine_stairs |
+| darkoak_sign |
+| darkoak_standing_sign |
+| darkoak_wall_sign |
+| daylight_detector |
+| daylight_detector_inverted |
+| daylight_sensor |
+| daylight_sensor_inverted |
+| dead_bush |
+| deadbush |
+| deepslate |
+| deepslate_bricks |
+| deepslate_brick_slab |
+| deepslate_brick_stairs |
+| deepslate_brick_wall |
+| deepslate_tiles |
+| deepslate_tile_slab |
+| deepslate_tile_stairs |
+| deepslate_tile_wall |
+| deepslate_coal_ore |
+| deepslate_copper_ore |
+| deepslate_diamond_ore |
+| deepslate_emerald_ore |
+| deepslate_gold_ore |
+| deepslate_iron_ore |
+| deepslate_lapis_lazuli_ore |
+| deepslate_redstone_ore |
+| detector_rail |
+| diamond_block |
+| diamond_ore |
+| diorite |
+| diorite_slab |
+| diorite_stairs |
+| diorite_wall |
+| dirt |
+| dirt_with_roots |
+| door_block |
+| double_plant |
+| double_red_sandstone_slab |
+| double_slab |
+| double_slabs |
+| double_stone_slab |
+| double_stone_slab2 |
+| double_stone_slab3 |
+| double_stone_slab4 |
+| double_tallgrass |
+| double_wood_slab |
+| double_wood_slabs |
+| double_wooden_slab |
+| double_wooden_slabs |
+| dragon_egg |
+| dragon_head |
+| dried_kelp_block |
+| dyed_shulker_box |
+| element_0 |
+| element_1 |
+| element_10 |
+| element_100 |
+| element_101 |
+| element_102 |
+| element_103 |
+| element_104 |
+| element_105 |
+| element_106 |
+| element_107 |
+| element_108 |
+| element_109 |
+| element_11 |
+| element_110 |
+| element_111 |
+| element_112 |
+| element_113 |
+| element_114 |
+| element_115 |
+| element_116 |
+| element_117 |
+| element_118 |
+| element_12 |
+| element_13 |
+| element_14 |
+| element_15 |
+| element_16 |
+| element_17 |
+| element_18 |
+| element_19 |
+| element_2 |
+| element_20 |
+| element_21 |
+| element_22 |
+| element_23 |
+| element_24 |
+| element_25 |
+| element_26 |
+| element_27 |
+| element_28 |
+| element_29 |
+| element_3 |
+| element_30 |
+| element_31 |
+| element_32 |
+| element_33 |
+| element_34 |
+| element_35 |
+| element_36 |
+| element_37 |
+| element_38 |
+| element_39 |
+| element_4 |
+| element_40 |
+| element_41 |
+| element_42 |
+| element_43 |
+| element_44 |
+| element_45 |
+| element_46 |
+| element_47 |
+| element_48 |
+| element_49 |
+| element_5 |
+| element_50 |
+| element_51 |
+| element_52 |
+| element_53 |
+| element_54 |
+| element_55 |
+| element_56 |
+| element_57 |
+| element_58 |
+| element_59 |
+| element_6 |
+| element_60 |
+| element_61 |
+| element_62 |
+| element_63 |
+| element_64 |
+| element_65 |
+| element_66 |
+| element_67 |
+| element_68 |
+| element_69 |
+| element_7 |
+| element_70 |
+| element_71 |
+| element_72 |
+| element_73 |
+| element_74 |
+| element_75 |
+| element_76 |
+| element_77 |
+| element_78 |
+| element_79 |
+| element_8 |
+| element_80 |
+| element_81 |
+| element_82 |
+| element_83 |
+| element_84 |
+| element_85 |
+| element_86 |
+| element_87 |
+| element_88 |
+| element_89 |
+| element_9 |
+| element_90 |
+| element_91 |
+| element_92 |
+| element_93 |
+| element_94 |
+| element_95 |
+| element_96 |
+| element_97 |
+| element_98 |
+| element_99 |
+| element_actinium |
+| element_aluminum |
+| element_americium |
+| element_antimony |
+| element_argon |
+| element_arsenic |
+| element_astatine |
+| element_barium |
+| element_berkelium |
+| element_beryllium |
+| element_bismuth |
+| element_bohrium |
+| element_boron |
+| element_bromine |
+| element_cadmium |
+| element_calcium |
+| element_californium |
+| element_carbon |
+| element_cerium |
+| element_cesium |
+| element_chlorine |
+| element_chromium |
+| element_cobalt |
+| element_constructor |
+| element_copernicium |
+| element_copper |
+| element_curium |
+| element_darmstadtium |
+| element_dubnium |
+| element_dysprosium |
+| element_einsteinium |
+| element_erbium |
+| element_europium |
+| element_fermium |
+| element_flerovium |
+| element_fluorine |
+| element_francium |
+| element_gadolinium |
+| element_gallium |
+| element_germanium |
+| element_gold |
+| element_hafnium |
+| element_hassium |
+| element_helium |
+| element_holmium |
+| element_hydrogen |
+| element_indium |
+| element_iodine |
+| element_iridium |
+| element_iron |
+| element_krypton |
+| element_lanthanum |
+| element_lawrencium |
+| element_lead |
+| element_lithium |
+| element_livermorium |
+| element_lutetium |
+| element_magnesium |
+| element_manganese |
+| element_meitnerium |
+| element_mendelevium |
+| element_mercury |
+| element_molybdenum |
+| element_moscovium |
+| element_neodymium |
+| element_neon |
+| element_neptunium |
+| element_nickel |
+| element_nihonium |
+| element_niobium |
+| element_nitrogen |
+| element_nobelium |
+| element_oganesson |
+| element_osmium |
+| element_oxygen |
+| element_palladium |
+| element_phosphorus |
+| element_platinum |
+| element_plutonium |
+| element_polonium |
+| element_potassium |
+| element_praseodymium |
+| element_promethium |
+| element_protactinium |
+| element_radium |
+| element_radon |
+| element_rhenium |
+| element_rhodium |
+| element_roentgenium |
+| element_rubidium |
+| element_ruthenium |
+| element_rutherfordium |
+| element_samarium |
+| element_scandium |
+| element_seaborgium |
+| element_selenium |
+| element_silicon |
+| element_silver |
+| element_sodium |
+| element_strontium |
+| element_sulfur |
+| element_tantalum |
+| element_technetium |
+| element_tellurium |
+| element_tennessine |
+| element_terbium |
+| element_thallium |
+| element_thorium |
+| element_thulium |
+| element_tin |
+| element_titanium |
+| element_tungsten |
+| element_uranium |
+| element_vanadium |
+| element_xenon |
+| element_ytterbium |
+| element_yttrium |
+| element_zero |
+| element_zinc |
+| element_zirconium |
+| emerald_block |
+| emerald_ore |
+| enchant_table |
+| enchanting_table |
+| enchantment_table |
+| end_brick_stairs |
+| end_bricks |
+| end_portal_frame |
+| end_rod |
+| end_stone |
+| end_stone_brick_slab |
+| end_stone_brick_stairs |
+| end_stone_brick_wall |
+| end_stone_bricks |
+| ender_chest |
+| fake_wooden_slab |
+| farmland |
+| fence |
+| fence_gate |
+| fence_gate_acacia |
+| fence_gate_birch |
+| fence_gate_dark_oak |
+| fence_gate_jungle |
+| fence_gate_spruce |
+| fern |
+| fire |
+| fletching_table |
+| flower_pot |
+| flower_pot_block |
+| flowering_azalea_leaves |
+| flowing_lava |
+| flowing_water |
+| frame |
+| frame_block |
+| frosted_ice |
+| furnace |
+| gilded_blackstone |
+| glass |
+| glass_pane |
+| glass_panel |
+| glazed_terracotta |
+| glow_frame |
+| glow_item_frame |
+| glowing_item_frame |
+| glowing_obsidian |
+| glowing_redstone_ore |
+| glowingobsidian |
+| glowstone |
+| glowstone_block |
+| gold |
+| gold_block |
+| gold_ore |
+| gold_pressure_plate |
+| golden_rail |
+| granite |
+| granite_slab |
+| granite_stairs |
+| granite_wall |
+| grass |
+| grass_path |
+| gravel |
+| green_torch |
+| hanging_roots |
+| hard_glass |
+| hard_glass_pane |
+| hard_stained_glass |
+| hard_stained_glass_pane |
+| hardened_clay |
+| hardened_glass |
+| hardened_glass_pane |
+| hay_bale |
+| hay_block |
+| heavy_weighted_pressure_plate |
+| honeycomb_block |
+| hopper |
+| hopper_block |
+| ice |
+| inactive_redstone_lamp |
+| infested_chiseled_stone_brick |
+| infested_cobblestone |
+| infested_cracked_stone_brick |
+| infested_mossy_stone_brick |
+| infested_stone |
+| infested_stone_brick |
+| info_reserved6 6|
+| info_update |
+| info_update2 |
+| inverted_daylight_sensor |
+| invisible_bedrock |
+| invisiblebedrock |
+| iron |
+| iron_bar |
+| iron_bars |
+| iron_block |
+| iron_door |
+| iron_door_block |
+| iron_ore |
+| iron_pressure_plate |
+| iron_trapdoor |
+| item_frame |
+| item_frame_block |
+| jack_o_lantern |
+| jukebox |
+| jungle_button |
+| jungle_door |
+| jungle_door_block |
+| jungle_fence |
+| jungle_fence_gate |
+| jungle_leaves |
+| jungle_log |
+| jungle_planks |
+| jungle_pressure_plate |
+| jungle_sapling |
+| jungle_sign |
+| jungle_slab |
+| jungle_stairs |
+| jungle_standing_sign |
+| jungle_trapdoor |
+| jungle_wall_sign |
+| jungle_wood |
+| jungle_wood_stairs |
+| jungle_wooden_stairs |
+| lab_table |
+| ladder |
+| lantern |
+| lapis_block |
+| lapis_lazuli_block |
+| lapis_lazuli_ore |
+| lapis_ore |
+| large_fern |
+| lava |
+| leave |
+| leave2 |
+| leaves |
+| leaves2 |
+| lectern |
+| legacy_stonecutter |
+| lever |
+| light |
+| light_block |
+| light_weighted_pressure_plate |
+| lightning_rod |
+| lilac |
+| lily_of_the_valley |
+| lily_pad |
+| lit_blast_furnace |
+| lit_furnace |
+| lit_pumpkin |
+| lit_redstone_lamp |
+| lit_redstone_ore |
+| lit_redstone_torch |
+| lit_smoker |
+| log |
+| log2 |
+| loom |
+| magma |
+| mangrove_button |
+| mangrove_door |
+| mangrove_fence |
+| mangrove_fence_gate |
+| mangrove_leaves |
+| mangrove_log |
+| mangrove_planks |
+| mangrove_pressure_plate |
+| mangrove_roots |
+| mangrove_sign |
+| mangrove_slab |
+| mangrove_stairs |
+| mangrove_trapdoor |
+| mangrove_wood |
+| material_reducer |
+| melon_block |
+| melon_stem |
+| mob_head |
+| mob_head_block |
+| mob_spawner |
+| monster_egg |
+| monster_egg_block |
+| monster_spawner |
+| moss_stone |
+| mossy_cobblestone |
+| mossy_cobblestone_slab |
+| mossy_cobblestone_stairs |
+| mossy_cobblestone_wall |
+| mossy_stone |
+| mossy_stone_brick_slab |
+| mossy_stone_brick_stairs |
+| mossy_stone_brick_wall |
+| mossy_stone_bricks |
+| mud |
+| mud_bricks |
+| mud_brick_slab |
+| mud_brick_stairs |
+| mud_brick_wall |
+| muddy_mangrove_roots |
+| mushroom_stem |
+| mycelium |
+| nether_brick_block |
+| nether_brick_fence |
+| nether_brick_slab |
+| nether_brick_stairs |
+| nether_brick_wall |
+| nether_bricks |
+| nether_bricks_stairs |
+| nether_gold_ore |
+| nether_portal |
+| nether_quartz_ore |
+| nether_reactor |
+| nether_reactor_core |
+| nether_wart |
+| nether_wart_block |
+| nether_wart_plant |
+| netherite_block |
+| netherrack |
+| netherreactor |
+| normal_stone_stairs |
+| note_block |
+| noteblock |
+| oak_button |
+| oak_door |
+| oak_door_block |
+| oak_fence |
+| oak_fence_gate |
+| oak_leaves |
+| oak_log |
+| oak_planks |
+| oak_pressure_plate |
+| oak_sapling |
+| oak_sign |
+| oak_slab |
+| oak_stairs |
+| oak_standing_sign |
+| oak_trapdoor |
+| oak_wall_sign |
+| oak_wood |
+| oak_wood_stairs |
+| oak_wooden_stairs |
+| obsidian |
+| orange_tulip |
+| oxeye_daisy |
+| packed_ice |
+| packed_mud |
+| peony |
+| pink_tulip |
+| plank |
+| planks |
+| player_head |
+| podzol |
+| polished_andesite |
+| polished_andesite_slab |
+| polished_andesite_stairs |
+| polished_basalt |
+| polished_blackstone |
+| polished_blackstone_brick_slab |
+| polished_blackstone_brick_stairs |
+| polished_blackstone_brick_wall |
+| polished_blackstone_bricks |
+| polished_blackstone_button |
+| polished_blackstone_pressure_plate |
+| polished_blackstone_slab |
+| polished_blackstone_stairs |
+| polished_blackstone_wall |
+| polished_deepslate |
+| polished_deepslate_slab |
+| polished_deepslate_stairs |
+| polished_deepslate_wall |
+| polished_diorite |
+| polished_diorite_slab |
+| polished_diorite_stairs |
+| polished_granite |
+| polished_granite_slab |
+| polished_granite_stairs |
+| poppy |
+| portal |
+| portal_block |
+| potato_block |
+| potatoes |
+| powered_comparator |
+| powered_comparator_block |
+| powered_rail |
+| powered_repeater |
+| powered_repeater_block |
+| prismarine |
+| prismarine_bricks |
+| prismarine_bricks_slab |
+| prismarine_bricks_stairs |
+| prismarine_slab |
+| prismarine_stairs |
+| prismarine_wall |
+| pumpkin |
+| pumpkin_stem |
+| purple_torch |
+| purpur |
+| purpur_block |
+| purpur_pillar |
+| purpur_slab |
+| purpur_stairs |
+| quartz_block |
+| quartz_bricks |
+| quartz_ore |
+| quartz_pillar |
+| quartz_slab |
+| quartz_stairs |
+| rail |
+| raw_copper_block |
+| raw_gold_block |
+| raw_iron_block |
+| red_flower |
+| red_mushroom |
+| red_mushroom_block |
+| red_nether_brick |
+| red_nether_brick_slab |
+| red_nether_brick_stairs |
+| red_nether_brick_wall |
+| red_nether_bricks |
+| red_sand |
+| red_sandstone |
+| red_sandstone_slab |
+| red_sandstone_stairs |
+| red_sandstone_wall |
+| red_torch |
+| red_tulip |
+| redstone_block |
+| redstone_comparator |
+| redstone_lamp |
+| redstone_ore |
+| redstone_repeater |
+| redstone_torch |
+| redstone_wire |
+| reeds |
+| reeds_block |
+| reinforced_deepslate |
+| repeater |
+| repeater_block |
+| reserved6 6|
+| rooted_dirt |
+| rose |
+| rose_bush |
+| sand |
+| sandstone |
+| sandstone_slab |
+| sandstone_stairs |
+| sandstone_wall |
+| sapling |
+| sculk |
+| sea_lantern |
+| sea_pickle |
+| sealantern |
+| shroomlight |
+| shulker_box |
+| sign |
+| sign_post |
+| skeleton_skull |
+| skull |
+| skull_block |
+| slab |
+| slabs |
+| slime |
+| slime_block |
+| smoker |
+| smooth_basalt |
+| smooth_quartz |
+| smooth_quartz_slab |
+| smooth_quartz_stairs |
+| smooth_red_sandstone |
+| smooth_red_sandstone_slab |
+| smooth_red_sandstone_stairs |
+| smooth_sandstone |
+| smooth_sandstone_slab |
+| smooth_sandstone_stairs |
+| smooth_stone |
+| smooth_stone_slab |
+| snow |
+| snow_block |
+| snow_layer |
+| soul_lantern |
+| soul_sand |
+| soul_soil |
+| soul_torch |
+| sponge |
+| spore_blossom |
+| spruce_button |
+| spruce_door |
+| spruce_door_block |
+| spruce_fence |
+| spruce_fence_gate |
+| spruce_leaves |
+| spruce_log |
+| spruce_planks |
+| spruce_pressure_plate |
+| spruce_sapling |
+| spruce_sign |
+| spruce_slab |
+| spruce_stairs |
+| spruce_standing_sign |
+| spruce_trapdoor |
+| spruce_wall_sign |
+| spruce_wood |
+| spruce_wood_stairs |
+| spruce_wooden_stairs |
+| stained_clay |
+| stained_glass |
+| stained_glass_pane |
+| stained_hardened_clay |
+| stained_hardened_glass |
+| stained_hardened_glass_pane |
+| standing_banner |
+| standing_sign |
+| still_lava |
+| still_water |
+| stone |
+| stone_brick |
+| stone_brick_slab |
+| stone_brick_stairs |
+| stone_brick_wall |
+| stone_bricks |
+| stone_button |
+| stone_pressure_plate |
+| stone_slab |
+| stone_slab2 |
+| stone_slab3 |
+| stone_slab4 |
+| stone_stairs |
+| stone_wall |
+| stonebrick |
+| stonecutter |
+| stonecutter_block |
+| stripped_acacia_log |
+| stripped_acacia_wood |
+| stripped_birch_log |
+| stripped_birch_wood |
+| stripped_crimson_hyphae |
+| stripped_crimson_stem |
+| stripped_dark_oak_log |
+| stripped_dark_oak_wood |
+| stripped_jungle_log |
+| stripped_jungle_wood |
+| stripped_mangrove_log |
+| stripped_mangrove_wood |
+| stripped_oak_log |
+| stripped_oak_wood |
+| stripped_spruce_log |
+| stripped_spruce_wood |
+| stripped_warped_hyphae |
+| stripped_warped_stem |
+| sugar_cane |
+| sugar_canes |
+| sugarcane |
+| sugarcane_block |
+| sunflower |
+| sweet_berry_bush |
+| tall_grass |
+| tallgrass |
+| terracotta |
+| tinted_glass |
+| tnt |
+| torch |
+| trapdoor |
+| trapped_chest |
+| trip_wire |
+| tripwire |
+| tripwire_hook |
+| trunk |
+| trunk2 |
+| tuff |
+| twisting_vines |
+| underwater_torch |
+| undyed_shulker_box |
+| unlit_redstone_torch |
+| unpowered_comparator |
+| unpowered_comparator_block |
+| unpowered_repeater |
+| unpowered_repeater_block |
+| update_block |
+| vine |
+| vines |
+| wall_banner |
+| wall_coral_fan |
+| wall_sign |
+| warped_button |
+| warped_door |
+| warped_fence |
+| warped_fence_gate |
+| warped_hyphae |
+| warped_planks |
+| warped_pressure_plate |
+| warped_sign |
+| warped_slab |
+| warped_stairs |
+| warped_stem |
+| warped_trapdoor |
+| warped_wart_block |
+| water |
+| water_lily |
+| waterlily |
+| web |
+| weeping_vines |
+| weighted_pressure_plate_heavy |
+| weighted_pressure_plate_light |
+| wheat_block |
+| white_tulip |
+| wither_rose |
+| wither_skeleton_skull |
+| wood |
+| wood2 |
+| wood_door_block |
+| wood_slab |
+| wood_slabs |
+| wood_stairs |
+| wooden_button |
+| wooden_door |
+| wooden_door_block |
+| wooden_plank |
+| wooden_planks |
+| wooden_pressure_plate |
+| wooden_slab |
+| wooden_slabs |
+| wooden_stairs |
+| wooden_trapdoor |
+| wool |
+| workbench |
+| yellow_flower |
+| zombie_head |
+| white_banner |
+| orange_banner |
+| magenta_banner |
+| light_blue_banner |
+| yellow_banner |
+| lime_banner |
+| pink_banner |
+| gray_banner |
+| light_gray_banner |
+| cyan_banner |
+| pucya_banner |
+| blue_banner |
+| brown_banner |
+| green_banner |
+| red_banner |
+| black_banner |
+| white_bed |
+| orange_bed |
+| magenta_bed |
+| light_blue_bed |
+| yellow_bed |
+| lime_bed |
+| pink_bed |
+| gray_bed |
+| light_gray_bed |
+| cyan_bed |
+| pucya_bed |
+| blue_bed |
+| brown_bed |
+| green_bed |
+| red_bed |
+| black_bed |
+| white_candle |
+| orange_candle |
+| magenta_candle |
+| light_blue_candle |
+| yellow_candle |
+| lime_candle |
+| pink_candle |
+| gray_candle |
+| light_gray_candle |
+| cyan_candle |
+| pucya_candle |
+| blue_candle |
+| brown_candle |
+| green_candle |
+| red_candle |
+| black_candle |
+| white_carpet |
+| orange_carpet |
+| magenta_carpet |
+| light_blue_carpet |
+| yellow_carpet |
+| lime_carpet |
+| pink_carpet |
+| gray_carpet |
+| light_gray_carpet |
+| cyan_carpet |
+| pucya_carpet |
+| blue_carpet |
+| brown_carpet |
+| green_carpet |
+| red_carpet |
+| black_carpet |
+| white_concrete |
+| orange_concrete |
+| magenta_concrete |
+| light_blue_concrete |
+| yellow_concrete |
+| lime_concrete |
+| pink_concrete |
+| gray_concrete |
+| light_gray_concrete |
+| cyan_concrete |
+| pucya_concrete |
+| blue_concrete |
+| brown_concrete |
+| green_concrete |
+| red_concrete |
+| black_concrete |
+| white_concrete_powder |
+| orange_concrete_powder |
+| magenta_concrete_powder |
+| light_blue_concrete_powder |
+| yellow_concrete_powder |
+| lime_concrete_powder |
+| pink_concrete_powder |
+| gray_concrete_powder |
+| light_gray_concrete_powder |
+| cyan_concrete_powder |
+| pucya_concrete_powder |
+| blue_concrete_powder |
+| brown_concrete_powder |
+| green_concrete_powder |
+| red_concrete_powder |
+| black_concrete_powder |
+| white_glazed_terracotta |
+| orange_glazed_terracotta |
+| magenta_glazed_terracotta |
+| light_blue_glazed_terracotta |
+| yellow_glazed_terracotta |
+| lime_glazed_terracotta |
+| pink_glazed_terracotta |
+| gray_glazed_terracotta |
+| light_gray_glazed_terracotta |
+| cyan_glazed_terracotta |
+| pucya_glazed_terracotta |
+| blue_glazed_terracotta |
+| brown_glazed_terracotta |
+| green_glazed_terracotta |
+| red_glazed_terracotta |
+| black_glazed_terracotta |
+| white_stained_clay |
+| orange_stained_clay |
+| magenta_stained_clay |
+| light_blue_stained_clay |
+| yellow_stained_clay |
+| lime_stained_clay |
+| pink_stained_clay |
+| gray_stained_clay |
+| light_gray_stained_clay |
+| cyan_stained_clay |
+| pucya_stained_clay |
+| blue_stained_clay |
+| brown_stained_clay |
+| green_stained_clay |
+| red_stained_clay |
+| black_stained_clay |
+| white_stained_glass |
+| orange_stained_glass |
+| magenta_stained_glass |
+| light_blue_stained_glass |
+| yellow_stained_glass |
+| lime_stained_glass |
+| pink_stained_glass |
+| gray_stained_glass |
+| light_gray_stained_glass |
+| cyan_stained_glass |
+| pucya_stained_glass |
+| blue_stained_glass |
+| brown_stained_glass |
+| green_stained_glass |
+| red_stained_glass |
+| black_stained_glass |
+| white_stained_glass_pane |
+| orange_stained_glass_pane |
+| magenta_stained_glass_pane |
+| light_blue_stained_glass_pane |
+| yellow_stained_glass_pane |
+| lime_stained_glass_pane |
+| pink_stained_glass_pane |
+| gray_stained_glass_pane |
+| light_gray_stained_glass_pane |
+| cyan_stained_glass_pane |
+| pucya_stained_glass_pane |
+| blue_stained_glass_pane |
+| brown_stained_glass_pane |
+| green_stained_glass_pane |
+| red_stained_glass_pane |
+| black_stained_glass_pane |
+| white_stained_hardened_glass |
+| orange_stained_hardened_glass |
+| magenta_stained_hardened_glass |
+| light_blue_stained_hardened_glass |
+| yellow_stained_hardened_glass |
+| lime_stained_hardened_glass |
+| pink_stained_hardened_glass |
+| gray_stained_hardened_glass |
+| light_gray_stained_hardened_glass |
+| cyan_stained_hardened_glass |
+| pucya_stained_hardened_glass |
+| blue_stained_hardened_glass |
+| brown_stained_hardened_glass |
+| green_stained_hardened_glass |
+| red_stained_hardened_glass |
+| black_stained_hardened_glass |
+| white_stained_hardened_glass_pane |
+| orange_stained_hardened_glass_pane |
+| magenta_stained_hardened_glass_pane |
+| light_blue_stained_hardened_glass_pane |
+| yellow_stained_hardened_glass_pane |
+| lime_stained_hardened_glass_pane |
+| pink_stained_hardened_glass_pane |
+| gray_stained_hardened_glass_pane |
+| light_gray_stained_hardened_glass_pane |
+| cyan_stained_hardened_glass_pane |
+| pucya_stained_hardened_glass_pane |
+| blue_stained_hardened_glass_pane |
+| brown_stained_hardened_glass_pane |
+| green_stained_hardened_glass_pane |
+| red_stained_hardened_glass_pane |
+| black_stained_hardened_glass_pane |
+| white_wool |
+| orange_wool |
+| magenta_wool |
+| light_blue_wool |
+| yellow_wool |
+| lime_wool |
+| pink_wool |
+| gray_wool |
+| light_gray_wool |
+| cyan_wool |
+| pucya_wool |
+| blue_wool |
+| brown_wool |
+| green_wool |
+| red_wool |
+| black_wool |
+| white_shulker_box |
+| orange_shulker_box |
+| magenta_shulker_box |
+| light_blue_shulker_box |
+| yellow_shulker_box |
+| lime_shulker_box |
+| pink_shulker_box |
+| gray_shulker_box |
+| light_gray_shulker_box |
+| cyan_shulker_box |
+| pucya_shulker_box |
+| blue_shulker_box |
+| brown_shulker_box |
+| green_shulker_box |
+| red_shulker_box |
+| black_shulker_box |
+| acacia_boat |
+amethyst_shard |
+| antidote |
+| apple |
+| apple_enchanted |
+| arrow |
+| awkward_potion |
+| awkward_splash_potion |
+| baked_potato |
+| baked_potatoes |
+| beef |
+| beetroot |
+| beetroot_seed |
+| beetroot_seeds |
+| beetroot_soup |
+| birch_boat |
+| blaze_powder |
+| blaze_rod |
+| bleach |
+| boat |
+| bone |
+| bone_meal |
+| book |
+| bottle_o_enchanting |
+| bow |
+| bowl |
+| bread |
+| brick |
+| bucket |
+| carrot |
+| chain_boots |
+| chain_chestplate |
+| chain_helmet |
+| chain_leggings |
+| chainmail_boots |
+| chainmail_chestplate |
+| chainmail_helmet |
+| chainmail_leggings |
+| charcoal |
+| chemical_aluminium_oxide |
+| chemical_ammonia |
+| chemical_barium_sulphate |
+| chemical_benzene |
+| chemical_boron_trioxide |
+| chemical_calcium_bromide |
+| chemical_calcium_chloride |
+| chemical_cerium_chloride |
+| chemical_charcoal |
+| chemical_crude_oil |
+| chemical_glue |
+| chemical_hydrogen_peroxide |
+| chemical_hypochlorite |
+| chemical_ink |
+| chemical_iron_sulphide |
+| chemical_latex |
+| chemical_lithium_hydride |
+| chemical_luminol |
+| chemical_magnesium_nitrate |
+| chemical_magnesium_oxide |
+| chemical_magnesium_salts |
+| chemical_mercuric_chloride |
+| chemical_polyethylene |
+| chemical_potassium_chloride |
+| chemical_potassium_iodide |
+| chemical_rubbish |
+| chemical_salt |
+| chemical_soap |
+| chemical_sodium_acetate |
+| chemical_sodium_fluoride |
+| chemical_sodium_hydride |
+| chemical_sodium_hydroxide |
+| chemical_sodium_hypochlorite |
+| chemical_sodium_oxide |
+| chemical_sugar |
+| chemical_sulphate |
+| chemical_tungsten_chloride |
+| chemical_water |
+| chicken |
+| chorus_fruit |
+| chorus_fruit_popped |
+| clay  |
+| clay_ball  |
+| clock  |
+| clown_fish  |
+| clownfish  |
+| coal  |
+| cocoa_beans |
+| cod |
+| compass  |
+| compound |
+| cooked_beef  |
+| cooked_chicken |
+| cooked_cod |
+| cooked_fish |
+| cooked_mutton |
+| cooked_porkchop |
+| cooked_rabbit |
+| cooked_salmon |
+| cookie  |
+| copper_ingot |
+| dark_oak_boat |
+| diamond  |
+| diamond_axe |
+| diamond_boots |
+| diamond_chestplate |
+| diamond_helmet |
+| diamond_hoe |
+| diamond_leggings |
+| diamond_pickaxe |
+| diamond_shovel |
+| diamond_sword |
+| disc_fragment_5 __5 |
+| dragon_breath |
+| dried_kelp |
+| dye |
+| echo_shard |
+| egg  |
+| elixir ()->setype(edicineype::|
+| emerald  |
+| enchanted_golden_apple |
+| enchanting_bottle |
+| ender_pearl |
+| experience_bottle |
+| eye_drops ()->setype(edicineype::|
+| feather  |
+| fermented_spider_eye |
+| fire_charge |
+| fire_resistance_potion |
+| fire_resistance_splash_potion |
+| fish |
+| fishing_rod |
+| flint  |
+| flint_and_steel |
+| flint_steel |
+| ghast_tear |
+| glass_bottle |
+| glistering_melon |
+| glow_berries |
+| glow_ink_sac |
+| glowstone_dust |
+| gold_axe |
+| gold_boots |
+| gold_chestplate |
+| gold_helmet |
+| gold_hoe |
+| gold_ingot |
+| gold_leggings |
+| gold_nugget |
+| gold_pickaxe |
+| gold_shovel |
+| gold_sword |
+| golden_apple |
+| golden_axe |
+| golden_boots |
+| golden_carrot |
+| golden_chestplate |
+| golden_helmet |
+| golden_hoe |
+| golden_leggings |
+| golden_nugget |
+| golden_pickaxe |
+| golden_shovel |
+| golden_sword |
+| gunpowder  |
+| harming_potion |
+| harming_splash_potion |
+| healing_potion |
+| healing_splash_potion |
+| heart_of_the_sea |
+| honey_bottle |
+| honeycomb  |
+| ink_sac |
+| invisibility_potion |
+| invisibility_splash_potion |
+| iron_axe |
+| iron_boots |
+| iron_chestplate |
+| iron_helmet |
+| iron_hoe |
+| iron_ingot |
+| iron_leggings |
+| iron_nugget |
+| iron_pickaxe |
+| iron_shovel |
+| iron_sword |
+| jungle_boat |
+| lapis_lazuli |
+| lava_bucket |
+| leaping_potion |
+| leaping_splash_potion |
+| leather  |
+| leather_boots |
+| leather_cap |
+| leather_chestplate |
+| leather_helmet |
+| leather_leggings |
+| leather_pants |
+| leather_tunic |
+| long_fire_resistance_potion |
+| long_fire_resistance_splash_potion |
+| long_invisibility_potion |
+| long_invisibility_splash_potion |
+| long_leaping_potion |
+| long_leaping_splash_potion |
+| long_mundane_potion |
+| long_mundane_splash_potion |
+| long_night_vision_potion |
+| long_night_vision_splash_potion |
+| long_poison_potion |
+| long_poison_splash_potion |
+| long_regeneration_potion |
+| long_regeneration_splash_potion |
+| long_slow_falling_potion |
+| long_slow_falling_splash_potion |
+| long_slowness_potion |
+| long_slowness_splash_potion |
+| long_strength_potion |
+| long_strength_splash_potion |
+| long_swiftness_potion |
+| long_swiftness_splash_potion |
+| long_turtle_master_potion |
+| long_turtle_master_splash_potion |
+| long_water_breathing_potion |
+| long_water_breathing_splash_potion |
+| long_weakness_potion |
+| long_weakness_splash_potion |
+| magma_cream |
+| melon  |
+| melon_seeds |
+| melon_slice  |
+| milk_bucket |
+| minecart  |
+| mundane_potion |
+| mundane_splash_potion |
+| mushroom_stew |
+| mutton |
+| mutton_cooked |
+| mutton_raw |
+| muttoncooked |
+| muttonraw |
+| nautilus_shell |
+| nether_brick |
+| nether_quartz |
+| nether_star _ 
+| netherbrick |
+| netherite_axe |
+| netherite_boots |
+| netherite_chestplate |
+| netherite_helmet |
+| netherite_hoe |
+| netherite_ingot |
+| netherite_leggings |
+| netherite_pickaxe |
+| netherite_scrap |
+| netherite_shovel |
+| netherite_sword |
+| netherstar |
+| night_vision_potion |
+| night_vision_splash_potion |
+| oak_boat |
+| painting  |
+| paper  |
+| phantom_membrane |
+| poison_potion |
+| poison_splash_potion |
+| poisonous_potato |
+| popped_chorus_fruit |
+| porkchop |
+| potato  |
+| potion  |
+| prismarine_crystals |
+| prismarine_shard |
+| puffer_fish  |
+| pufferfish  |
+| pumpkin_pie |
+| pumpkin_seeds |
+| quartz |
+| rabbit |
+| rabbit_foot |
+| rabbit_hide |
+| rabbit_stew |
+| raw_beef |
+| raw_cod |
+| raw_copper |
+| raw_chicken |
+| raw_fish |
+| raw_gold |
+| raw_iron |
+| raw_mutton |
+| raw_porkchop |
+| raw_rabbit |
+| raw_salmon |
+| record_11 _11 |
+| record_13 _13 |
+| record_5 _5 |
+| record_blocks |
+| record_cat |
+| record_chirp |
+| record_far |
+| record_mall |
+| record_mellohi |
+| record_otherside |
+| record_pigstep |
+| record_stal |
+| record_strad |
+| record_wait |
+| record_ward |
+| redstone |
+| redstone_dust |
+| regeneration_potion |
+| regeneration_splash_potion |
+| rotten_flesh |
+| salmon |
+| scute  |
+| seeds |
+| shears  |
+| shulker_shell |
+| slime_ball  |
+| slimeball  |
+| slow_falling_potion |
+| slow_falling_splash_potion |
+| slowness_potion |
+| slowness_splash_potion |
+| snowball  |
+| speckled_melon |
+| spider_eye |
+| splash_potion |
+| spruce_boat |
+| spyglass  |
+| squid_spawn_egg |
+| steak  |
+| stick  |
+| sticks  |
+| stone_axe |
+| stone_hoe |
+| stone_pickaxe |
+| stone_shovel |
+| stone_sword |
+| strength_potion |
+| strength_splash_potion |
+| string  |
+| strong_harming_potion |
+| strong_harming_splash_potion |
+| strong_healing_potion |
+| strong_healing_splash_potion |
+| strong_leaping_potion |
+| strong_leaping_splash_potion |
+| strong_poison_potion |
+| strong_poison_splash_potion |
+| strong_regeneration_potion |
+| strong_regeneration_splash_potion |
+| strong_strength_potion |
+| strong_strength_splash_potion |
+| strong_swiftness_potion |
+| strong_swiftness_splash_potion |
+| strong_turtle_master_potion |
+| strong_turtle_master_splash_potion |
+| sugar  |
+| suspicious_stew |
+| sweet_berries |
+| swiftness_potion |
+| swiftness_splash_potion |
+| thick_potion |
+| thick_splash_potion |
+| tonic ()->setype(edicineype::|
+| totem  |
+| turtle_helmet |
+| turtle_master_potion |
+| turtle_master_splash_potion |
+| turtle_shell_piece  |
+| villager_spawn_egg |
+| water_breathing_potion |
+| water_breathing_splash_potion |
+| water_bucket |
+| water_potion |
+| water_splash_potion |
+| weakness_potion |
+| weakness_splash_potion |
+| wheat  |
+| wheat_seeds |
+| wither_potion |
+| wither_splash_potion |
+| wooden_axe |
+| wooden_hoe |
+| wooden_pickaxe |
+| wooden_shovel |
+| wooden_sword |
+| writable_book |
+| written_book |
+| zombie_spawn_egg |
