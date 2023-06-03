@@ -51,7 +51,7 @@
   }
 }
 ```
-## 🗒️ Items ids:
+## 🗒️ Items List:
 
 - [Click](https://github.com/Joshet18/CustomCraft/blob/main/ItemsIds.md) to show
 ##
