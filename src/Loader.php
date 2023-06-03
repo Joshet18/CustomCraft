@@ -10,11 +10,11 @@ use pocketmine\console\ConsoleCommandSender;
 use pocketmine\crafting\FurnaceRecipe;
 use pocketmine\crafting\ShapedRecipe;
 use pocketmine\crafting\FurnaceType;
+use pocketmine\crafting\ExactRecipeIngredient;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
-use pocketmine\item\ItemFactory;
+use pocketmine\item\StringToItemParser;
 use pocketmine\utils\Config;
-use pocketmine\item\ItemIds;
 use pocketmine\item\Item;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -44,11 +44,17 @@ class Loader extends PluginBase{
     'infinity' => EnchantmentIds::INFINITY,
     'mending' => EnchantmentIds::MENDING,
     'vanishing' => EnchantmentIds::VANISHING,
+    'swift_sneak' => EnchantmentIds::SWIFT_SNEAK,
     'fortune' => EnchantmentIds::FORTUNE,
     'looting' => EnchantmentIds::LOOTING
   ];
   private $cf;
   private int $total = 0;
+  
+  public function onEnable(): void {
+    $this->getServer()->getAsyncPool()->submitTask(new CheckUpdatesTask($this->getName(), $this->getDescription()->getVersion()));
+    if($this->cf->get("logger", false))$this->getLogger()->info("{$this->total} Recipes loaders");
+  }
   
   public function onLoad(): void {
     $this->furnacesTypes["furnace"] = FurnaceType::FURNACE();
@@ -100,76 +106,79 @@ class Loader extends PluginBase{
   }
   
   public function loadCraftingRecipes(){
-    $factory = ItemFactory::getInstance();
+    $factory = StringToItemParser::getInstance();
     foreach(array_diff(scandir($this->getDataFolder()."Crafting_table"), ["..", "."]) as $path){
       $check = explode(".", $path);
-      if(isset($check[1]) && $check[1] === "json"){
+      if($this->checkFileExtension($path)){
         if(!in_array($check[0], $this->cf->getNested("blacklist.crafting", []))){
           $config = new Config($this->getDataFolder()."/Crafting_table/{$path}", Config::JSON);
           $v = $config->getAll();
           if($this->checkCraftingData($v)){
             $recipes = [];
             foreach($v['key'] as $k => $v2){
-              if(!$factory->get($v2['item'], $v2['data'], 1) instanceof Item)return;
-              $recipes[$k] = $factory->get($v2['item'], $v2['data'], 1);
+              if(!$factory->parse($v2['item']) instanceof Item)return;
+              $recipes[$k] = new ExactRecipeIngredient($factory->parse($v2['item']));
             }
             $count = 1;
-            if(isset($v['result']['count']) && is_numeric($v['result']['count']))$count = $v['result']['count'];
-            $result = $factory->get($v['result']['item'], $v['result']['data'], $count);
+            if(isset($v['result']['count']) && is_numeric($v['result']['count']) && $v['result']['count'] > 0)$count = (int)$v['result']['count'];
+            $result = $factory->parse($v['result']['item'])->setCount($count);
             if(!$result instanceof Item)return;
             if(isset($v['result']['name']) && $v['result']['name'] !== "")$result->setCustomName("§r".TextFormat::colorize($v['result']['name']));
-            foreach($v['result']['enchantments'] as $e => $lvl){
+            if(isset($v['result']['enchantments']) && is_array($v['result']['enchantments']))foreach($v['result']['enchantments'] as $e => $lvl){
               $enchant = EnchantmentIdMap::getInstance()->fromId($this->getEnchantmentByName($e));
-              if($enchant !== null)$result->addEnchantment(new EnchantmentInstance($enchant, $lvl));
+              $level = 1;
+              if(is_numeric($lvl) && $lvl > 1)$level = (int)$lvl;
+              if($level > 255)$level = 255;
+              if($enchant !== null)$result->addEnchantment(new EnchantmentInstance($enchant, $level));
             }
             $this->total++;
             $this->getServer()->getCraftingManager()->registerShapedRecipe(new ShapedRecipe($v['pattern'], $recipes, [$result]));
           }else{
-            if($this->cf->get("error-logger", false))$this->getLogger()->error("Invalid data entered in Crafting_table/{$path}");
+            if($this->cf->get("logger", false))$this->getLogger()->error("Invalid data entered in Crafting_table/{$path}");
           }
         }
       }else{
-        if($this->cf->get("error-logger", false))$this->getLogger()->error("Crafting_table/{$path} must be a JSON file");
+        if($this->cf->get("logger", false))$this->getLogger()->error("Crafting_table/{$path} must be a JSON file");
       }
     }
   }
   
   public function loadFuenaceRecipes(){
-    $factory = ItemFactory::getInstance();
+    $factory = StringToItemParser::getInstance();
     foreach(array_diff(scandir($this->getDataFolder()."Furnace"), ["..", "."]) as $path){
       $check = explode(".", $path);
-      if(isset($check[1]) && $check[1] === "json"){
+      if($this->checkFileExtension($path)){
         if(!in_array($check[0], $this->cf->getNested("blacklist.furnace", []))){
           $config = new Config($this->getDataFolder()."/Furnace/{$path}", Config::JSON);
           $v = $config->getAll();
-          if(isset($v['tags']) && isset($v['output']) && isset($v['input']) && $this->checkFurnaceData($v['input']) && $this->checkFurnaceData($v['output'])){
+          if(isset($v['tags']) && isset($v['output']) && isset($v['input']) && $this->checkData($v['input']) && $this->checkData($v['output'])){
             switch($this->checkTags($v['tags'])){
               case -1:
-                if($this->cf->get("error-logger", false))$this->getLogger()->error("Furnace/{$path} tags must be of type array!");
+                if($this->cf->get("logger", false))$this->getLogger()->error("Furnace/{$path} tags must be of type array!");
               break;
               case 0:
-                if($this->cf->get("error-logger", false))$this->getLogger()->error("Invalid tags entered in Furnace/{$path}, Tags available: [furnace, blast_furnace, smoker_furnace]");
+                if($this->cf->get("logger", false))$this->getLogger()->error("Invalid tags entered in Furnace/{$path}, Tags available: [furnace, blast_furnace, smoker_furnace]");
               break;
               case 1:
-                $output = $factory->get($v['output']['item'], $v['output']['data'], 1);
-                $input = $factory->get($v['input']["item"], $v['input']['data'], 1);
+                $output = $factory->parse($v['output']['item']);
+                $input = $factory->parse($v['input']["item"]);
                 $this->total++;
                 if(!$input instanceof Item)return;
                 if(!$output instanceof Item)return;
-                $recipe = new FurnaceRecipe($output, $input);
+                $recipe = new FurnaceRecipe($output, new ExactRecipeIngredient($input));
                 foreach($v['tags'] as $tag){
                   if(isset($this->furnacesTypes[$tag]))$this->getServer()->getCraftingManager()->getFurnaceRecipeManager($this->furnacesTypes[$tag])->register($recipe);
                 }
               break;
             }
-          }elseif(!isset($v['output']) or !$this->checkFurnaceData($v['output'])){
-            if($this->cf->get("error-logger", false))$this->getLogger()->error("Invalid output format entered in Furnace/{$path}");
-          }elseif(!isset($v['input']) or !$this->checkFurnaceData($v['input'])){
-            if($this->cf->get("error-logger", false))$this->getLogger()->error("Invalid input format entered in Furnace/{$path}");
+          }elseif(!isset($v['output']) or !$this->checkData($v['output'])){
+            if($this->cf->get("logger", false))$this->getLogger()->error("Invalid output format entered in Furnace/{$path}");
+          }elseif(!isset($v['input']) or !$this->checkData($v['input'])){
+            if($this->cf->get("logger", false))$this->getLogger()->error("Invalid input format entered in Furnace/{$path}");
           }
         }
       }else{
-        if($this->cf->get("error-logger", false))$this->getLogger()->error("Furnace/{$path} must be a JSON file");
+        if($this->cf->get("logger", false))$this->getLogger()->error("Furnace/{$path} must be a JSON file");
       }
     }
   }
@@ -197,7 +206,7 @@ class Loader extends PluginBase{
         return false;
       }
       foreach($tag['key'] as $k => $value){
-        if($this->checkFurnaceData($value))$keys[$k] = $k;
+        if($this->checkData($value))$keys[$k] = $k;
       }
       foreach($shape as $n => $row){
         if(strlen($row) !== $width){
@@ -215,13 +224,18 @@ class Loader extends PluginBase{
         }
 			  $v = true;
 		  }
-		  if(!$this->checkFurnaceData($tag['result']))$v = false;
+		  if(!$this->checkData($tag['result']))$v = false;
     }
     return $v;
   }
   
-  private function checkFurnaceData($tag): bool {
-    if(is_array($tag) && isset($tag['item']) && isset($tag['data']) && is_numeric($tag['item']) && is_numeric($tag['data']))return true;
+  private function checkFileExtension(string $path):bool{
+    $extension = explode(".", $path);
+    return (isset($extension[1]) && $extension[1] === "json");
+  }
+  
+  private function checkData($tag): bool {
+    if(is_array($tag) && isset($tag['item']) && is_string($tag['item']))return true;
     return false;
   }
 }
