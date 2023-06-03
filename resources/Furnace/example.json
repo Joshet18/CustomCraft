@@ -5,11 +5,9 @@
     "smoker_furnace"
   ],
   "output": {
-    "item": 0,
-    "data": 0
+    "item": "minecraft:cobble"
   },
   "input": {
-    "item": 0,
-    "data": 0
+    "item": "minecraft:stick"
   }
 }
